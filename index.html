@@ -1,263 +1,241 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Skylance Furniture – Customer Reviews</title>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Skylance Furniture – Customer Reviews</title>
 
-    <link
-      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@300;400;500&display=swap"
-      rel="stylesheet"
-    />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 
-    <style>
-      :root {
-        --gold: #c9a24d;
-        --text: #eaeaea;
-        --muted: #a5a5a5;
-      }
+<style>
+:root{
+  --gold:#c9a24d;
+  --text:#eaeaea;
+  --muted:#a5a5a5;
+}
 
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
+*{margin:0;padding:0;box-sizing:border-box;}
 
-      body {
-        font-family: "Inter", sans-serif;
-        background: linear-gradient(180deg, #0b0b0b, #121212);
-        color: var(--text);
-        overflow-x: hidden;
-      }
+body{
+  font-family:'Inter',sans-serif;
+  background:linear-gradient(180deg,#0b0b0b,#121212);
+  color:var(--text);
+  overflow-x:hidden;
+}
 
-      .container {
-        max-width: 900px;
-        margin: auto;
-        padding: 40px 16px;
-      }
+.container{
+  max-width:900px;
+  margin:auto;
+  padding:40px 16px;
+}
 
-      header {
-        text-align: center;
-        margin-bottom: 40px;
-        animation: fadeDown 1s ease;
-      }
+header{
+  text-align:center;
+  margin-bottom:40px;
+  animation:fadeDown 1s ease;
+}
 
-      header h1 {
-        font-family: "Playfair Display", serif;
-        font-size: clamp(28px, 5vw, 46px);
-        color: var(--gold);
-      }
+header h1{
+  font-family:'Playfair Display',serif;
+  font-size:clamp(28px,5vw,46px);
+  color:var(--gold);
+}
 
-      header p {
-        margin-top: 10px;
-        color: var(--muted);
-        font-size: 14px;
-      }
+header p{
+  margin-top:10px;
+  color:var(--muted);
+  font-size:14px;
+}
 
-      .slider-wrapper {
-        overflow: hidden;
-        width: 100%;
-      }
+.slider-wrapper{
+  overflow:hidden;
+  width:100%;
+}
 
-      .slider {
-        display: flex;
-        transition: transform 0.6s ease;
-      }
+.slider{
+  display:flex;
+  transition:transform .6s ease;
+}
 
-      .review-card {
-        min-width: 100%;
-        background: linear-gradient(180deg, #181818, #111);
-        border: 1px solid rgba(255, 255, 255, 0.06);
-        border-radius: 20px;
-        padding: 26px;
-        box-shadow: 0 25px 50px rgba(0, 0, 0, 0.6);
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        animation: fadeUp 0.8s ease;
-      }
+.review-card{
+  min-width:100%;
+  background:linear-gradient(180deg,#181818,#111);
+  border:1px solid rgba(255,255,255,0.06);
+  border-radius:20px;
+  padding:26px;
+  box-shadow:0 25px 50px rgba(0,0,0,0.6);
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+  animation:fadeUp .8s ease;
+}
 
-      .review-card h3 {
-        color: var(--gold);
-        font-weight: 500;
-        margin-bottom: 10px;
-      }
+.review-card h3{
+  color:var(--gold);
+  font-weight:500;
+  margin-bottom:10px;
+}
 
-      .review-card p {
-        font-size: 15px;
-        line-height: 1.7;
-        color: #ddd;
-      }
+.review-card p{
+  font-size:15px;
+  line-height:1.7;
+  color:#ddd;
+}
 
-      .actions {
-        display: flex;
-        gap: 12px;
-        margin-top: 24px;
-      }
+.actions{
+  display:flex;
+  gap:12px;
+  margin-top:24px;
+}
 
-      button {
-        flex: 1;
-        padding: 12px;
-        border-radius: 10px;
-        font-size: 14px;
-        cursor: pointer;
-        transition: 0.3s;
-      }
+button{
+  flex:1;
+  padding:12px;
+  border-radius:10px;
+  font-size:14px;
+  cursor:pointer;
+  transition:.3s;
+}
 
-      .copy {
-        background: #222;
-        color: #fff;
-        border: 1px solid rgba(255, 255, 255, 0.15);
-      }
+.copy{
+  background:#222;
+  color:#fff;
+  border:1px solid rgba(255,255,255,0.15);
+}
 
-      .copy:hover {
-        background: #2a2a2a;
-      }
+.copy:hover{background:#2a2a2a;}
 
-      .review-now {
-        background: var(--gold);
-        color: #000;
-        font-weight: 500;
-        border: none;
-      }
+.review-now{
+  background:var(--gold);
+  color:#000;
+  font-weight:500;
+  border:none;
+}
 
-      .review-now:hover {
-        opacity: 0.85;
-      }
+.review-now:hover{opacity:.85;}
 
-      .controls {
-        display: flex;
-        justify-content: center;
-        gap: 16px;
-        margin-top: 32px;
-      }
+.controls{
+  display:flex;
+  justify-content:center;
+  gap:16px;
+  margin-top:32px;
+}
 
-      .control-btn {
-        width: 46px;
-        height: 46px;
-        border-radius: 50%;
-        background: #1c1c1c;
-        border: 1px solid rgba(255, 255, 255, 0.45);
-        color: #fff;
-        font-size: 20px;
-        cursor: pointer;
-        transition: 0.3s;
-      }
+.control-btn{
+  width:46px;
+  height:46px;
+  border-radius:50%;
+  background:#1c1c1c;
+  border:1px solid rgba(255,255,255,0.45);
+  color:#fff;
+  font-size:20px;
+  cursor:pointer;
+  transition:.3s;
+}
 
-      .control-btn:hover {
-        background: #262626;
-        border-color: #fff;
-      }
+.control-btn:hover{
+  background:#262626;
+  border-color:#fff;
+}
 
-      footer {
-        text-align: center;
-        margin-top: 45px;
-        font-size: 13px;
-        color: #777;
-      }
+footer{
+  text-align:center;
+  margin-top:45px;
+  font-size:13px;
+  color:#777;
+}
 
-      @keyframes fadeDown {
-        from {
-          opacity: 0;
-          transform: translateY(-30px);
-        }
-        to {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      }
-      @keyframes fadeUp {
-        from {
-          opacity: 0;
-          transform: translateY(30px);
-        }
-        to {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      }
-    </style>
-  </head>
+@keyframes fadeDown{
+  from{opacity:0;transform:translateY(-30px);}
+  to{opacity:1;transform:translateY(0);}
+}
+@keyframes fadeUp{
+  from{opacity:0;transform:translateY(30px);}
+  to{opacity:1;transform:translateY(0);}
+}
+</style>
+</head>
 
-  <body>
-    <div class="container">
-      <header>
-        <h1>Skylance Furniture</h1>
-        <p>Premium Furniture Craftsmanship Across Mumbai</p>
-      </header>
+<body>
 
-      <div class="slider-wrapper">
-        <div class="slider" id="slider"></div>
-      </div>
+<div class="container">
+  <header>
+    <h1>Skylance Furniture</h1>
+    <p>Premium Furniture Craftsmanship Across Mumbai</p>
+  </header>
 
-      <div class="controls">
-        <button class="control-btn" onclick="prev()">‹</button>
-        <button class="control-btn" onclick="next()">›</button>
-      </div>
+  <div class="slider-wrapper">
+    <div class="slider" id="slider"></div>
+  </div>
 
-      <footer>
-        Trusted by customers across Mumbai, Malad, Kandivali, Malwani, Thane &
-        nearby areas
-      </footer>
+  <div class="controls">
+    <button class="control-btn" onclick="prev()">‹</button>
+    <button class="control-btn" onclick="next()">›</button>
+  </div>
+
+  <footer>
+    Trusted by customers across Mumbai, Malad, Kandivali, Malwani, Thane & nearby areas
+  </footer>
+</div>
+
+<script>
+const reviews = [
+"Skylance Furniture delivers outstanding quality furniture in Mumbai. Their craftsmanship and finishing are premium and reliable.",
+"Highly professional furniture service by Skylance Furniture in Malad with excellent wood quality.",
+"Best furniture makers in Kandivali. Skylance Furniture delivered custom designs perfectly.",
+"Skylance Furniture Malwani offers premium furniture solutions with modern aesthetics.",
+"Very satisfied with Skylance Furniture Mumbai. Polished finish and professional execution.",
+"Skylance Furniture is a trusted furniture brand in Thane with consistent quality.",
+"Custom furniture from Skylance Furniture Malad exceeded expectations in every aspect.",
+"Reliable furniture services in Kandivali by Skylance Furniture with strong materials.",
+"Skylance Furniture Malwani delivers luxury furniture with attention to detail.",
+"One of the best furniture businesses in Mumbai known for premium standards.",
+"Skylance Furniture provides long lasting furniture across all over Mumbai.",
+"Excellent experience with Skylance Furniture Malad. True value for money.",
+"Skylance Furniture Kandivali specializes in premium custom furniture work.",
+"High quality craftsmanship by Skylance Furniture Malwani with professional service.",
+"Skylance Furniture Mumbai is known for elegant and durable furniture.",
+"Thane customers trust Skylance Furniture for premium furniture installations.",
+"Skylance Furniture Malad delivers luxury finishing and durability.",
+"Custom furniture by Skylance Furniture Kandivali was completed on time.",
+"Skylance Furniture Malwani provides premium modern furniture solutions.",
+"Skylance Furniture stands out in Mumbai for quality furniture and service."
+];
+
+const slider = document.getElementById("slider");
+const reviewLink = "https://g.page/r/CZzQhIK6v3p4EBM/review";
+
+reviews.forEach(text=>{
+  const card=document.createElement("div");
+  card.className="review-card";
+  card.innerHTML=`
+    <div>
+      <h3>Verified Customer</h3>
+      <p>${text}</p>
     </div>
+    <div class="actions">
+      <button class="copy" onclick="copyText('${text.replace(/'/g,"")}')">Copy Review</button>
+      <button class="review-now" onclick="window.open('${reviewLink}','_blank')">Review Now</button>
+    </div>`;
+  slider.appendChild(card);
+});
 
-    <script>
-      const reviews = [
-      "Skylance Furniture delivers outstanding quality furniture in Mumbai. Their craftsmanship and finishing are premium and reliable.",
-      "Highly professional furniture service by Skylance Furniture in Malad with excellent wood quality.",
-      "Best furniture makers in Kandivali. Skylance Furniture delivered custom designs perfectly.",
-      "Skylance Furniture Malwani offers premium furniture solutions with modern aesthetics.",
-      "Very satisfied with Skylance Furniture Mumbai. Polished finish and professional execution.",
-      "Skylance Furniture is a trusted furniture brand in Thane with consistent quality.",
-      "Custom furniture from Skylance Furniture Malad exceeded expectations in every aspect.",
-      "Reliable furniture services in Kandivali by Skylance Furniture with strong materials.",
-      "Skylance Furniture Malwani delivers luxury furniture with attention to detail.",
-      "One of the best furniture businesses in Mumbai known for premium standards.",
-      "Skylance Furniture provides long lasting furniture across all over Mumbai.",
-      "Excellent experience with Skylance Furniture Malad. True value for money.",
-      "Skylance Furniture Kandivali specializes in premium custom furniture work.",
-      "High quality craftsmanship by Skylance Furniture Malwani with professional service.",
-      "Skylance Furniture Mumbai is known for elegant and durable furniture.",
-      "Thane customers trust Skylance Furniture for premium furniture installations.",
-      "Skylance Furniture Malad delivers luxury finishing and durability.",
-      "Custom furniture by Skylance Furniture Kandivali was completed on time.",
-      "Skylance Furniture Malwani provides premium modern furniture solutions.",
-      "Skylance Furniture stands out in Mumbai for quality furniture and service."
-      ];
+let index = 0;
 
-      const slider = document.getElementById("slider");
-      const reviewLink = "https://g.page/r/CZzQhIK6v3p4EBM/review";
+function next(){
+  index = (index + 1) % reviews.length;
+  slider.style.transform = translateX(-${index * 100}%);
+}
 
-      reviews.forEach(text=>{
-        const card=document.createElement("div");
-        card.className="review-card";
-        card.innerHTML=`
-          <div>
-            <h3>Verified Customer</h3>
-            <p>${text}</p>
-          </div>
-          <div class="actions">
-            <button class="copy" onclick="copyText('${text.replace(/'/g,"")}')">Copy Review</button>
-            <button class="review-now" onclick="window.open('${reviewLink}','_blank')">Review Now</button>
-          </div>`;
-        slider.appendChild(card);
-      });
+function prev(){
+  index = (index - 1 + reviews.length) % reviews.length;
+  slider.style.transform = translateX(-${index * 100}%);
+}
 
-      let index = 0;
+function copyText(text){
+  navigator.clipboard.writeText(text);
+}
+</script>
 
-      function next(){
-        index = (index + 1) % reviews.length;
-        slider.style.transform = translateX(-${index * 100}%);
-      }
-
-      function prev(){
-        index = (index - 1 + reviews.length) % reviews.length;
-        slider.style.transform = translateX(-${index * 100}%);
-      }
-
-      function copyText(text){
-        navigator.clipboard.writeText(text);
-      }
-    </script>
-  </body>
+</body>
 </html>
